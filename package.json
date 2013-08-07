@@ -1,0 +1,14 @@
+{
+  "name": "docker-test-server",
+  "version": "0.0.0",
+  "description": "Docker / Coffeescript Test Server",
+  "main": "index.js",
+  "scripts": {
+  	"start": "./node_modules/coffee-script/bin/coffee index.coffee"
+  },
+  "author": "Jon Morehouse",
+  "license": "BSD",
+  "dependencies": {
+    "coffee-script": "~1.6.3"
+  }
+}
