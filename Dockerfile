@@ -22,7 +22,7 @@ RUN cd app && npm install
 EXPOSE 80
 
 ## set up the run command for this application
-#ENTRYPOINT ["/app"]
+ENTRYPOINT ["/usr/local/bin/npm"]
 #CMD ["npm", "start", "app"]
 #CMD ["/usr/local/bin/npm", "start"]
-CMD ["npm", "--version"]
+CMD ["--help"]
