@@ -1,24 +1,28 @@
 # DOCKER-VERSION 0.3.4
 
 # set up our actual docker image 
-FROM ubuntu:12.04
+#FROM ubuntu:12.04
+#docker pull shykes/nodejs
+FROM shykes/nodejs
 
-RUN echo "HELLO WORLD" > ~/test.md
-## Enable node and its installation
-#RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+# update applications and repos etc
+# RUN apt-get update 
+# RUN apt-get upgrade -y
 
-## now actually install node
-#RUN yum install -y npm-1.2.17-5.el6
+## now actually install our node directory into the correct element
+ADD . /app
 
-## now add our source code inside of the docker image
-#ADD . /src
+# we now have node installed on our server -- we can do whatever we want
+RUN cd app && npm install
 
-## install any and all dependencies needed
-#RUN cd /src; npm install
+# now install our modules!
+#RUN npm install
 
 ## now link the public facing port to the local docker daemon
-#EXPOSE 8080
+EXPOSE 80
 
 ## set up the run command for this application
-#CMD ["npm", "start"]
-
+#ENTRYPOINT ["/app"]
+#CMD ["npm", "start", "app"]
+#CMD ["/usr/local/bin/npm", "start"]
+CMD ["npm", "--version"]
