@@ -16,13 +16,13 @@ ADD . /app
 RUN cd app && npm install
 
 # now install our modules!
-#RUN npm install
+RUN npm install
 
 ## now link the public facing port to the local docker daemon
 EXPOSE 80
 
 ## set up the run command for this application
-#ENTRYPOINT ["/app"]
+ENTRYPOINT ["/usr/local/bin/npm"]
 #CMD ["npm", "start", "app"]
 #CMD ["/usr/local/bin/npm", "start"]
-CMD ["npm", "--version"]
+CMD ["--help"]
