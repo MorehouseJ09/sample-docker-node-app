@@ -1,7 +1,7 @@
 # DOCKER-VERSION 0.3.4
 
 # set up our actual docker image 
-FROM centos:12.04
+FROM ubuntu:12.04
 
 RUN echo "HELLO WORLD" > ~/test.md
 ## Enable node and its installation

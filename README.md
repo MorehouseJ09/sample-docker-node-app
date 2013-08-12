@@ -4,8 +4,9 @@ sample-docker-node-app
 This is a proof of concept / sample app testing out deployment of Node.js applications via Docker.
 
 [Docker](https://github.com/dotcloud/docker)
+[Node Installation Tips](http://schier.co/post/install-nodejs-on-ubuntu-server-with-ppa)
 
-ToDo
+Tasks
 =
 
 - Test out port forwarding from dockerfile to node application
