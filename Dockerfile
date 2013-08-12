@@ -16,7 +16,7 @@ ADD . /app
 RUN cd app && npm install
 
 # now install our modules!
-#RUN npm install
+RUN npm install
 
 ## now link the public facing port to the local docker daemon
 EXPOSE 80
